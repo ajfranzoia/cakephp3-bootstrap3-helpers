@@ -349,8 +349,10 @@ class BootstrapFormHelper extends FormHelper {
         unset($options['prepend']);
         $append = $this->_extractOption('append', $options, '') ;
         unset($options['append']);
-        if ($prepend || $append) {
+        if ($prepend) {
             $prepend = $this->prepend(null, $prepend);
+        }
+        if ($append) {
             $append  = $this->append(null, $append);
         }
 
