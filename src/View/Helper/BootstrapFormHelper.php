@@ -526,6 +526,7 @@ class BootstrapFormHelper extends FormHelper {
      * @see Cake\View\Helper\FormHelper::dateTime() for templating options.
      */
     public function time($fieldName, array $options = []) {
+        return parent::time($fieldName, $options);
         $fields = ['hour' => true, 'minute' => true, 'second' => false, 'timeFormat' => false];
         $this->templates([
             'dateWidget' => $this->_getDatetimeTemplate($fields, $options)
@@ -546,6 +547,7 @@ class BootstrapFormHelper extends FormHelper {
      * @see Cake\View\Helper\FormHelper::dateTime() for templating options.
      */
     public function date($fieldName, array $options = []) {
+        return parent::date($fieldName, $options);
         $fields = ['year' => true, 'month' => true, 'day' => true];
         $this->templates([
             'dateWidget' => $this->_getDatetimeTemplate($fields, $options)
